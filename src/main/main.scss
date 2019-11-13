@@ -1,47 +1,45 @@
+@import '../vars';
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat-Regular';
   text-decoration: none;
   box-sizing: border-box;
+  height: 100%;
 }
 
 ul {
   list-style-type: none;
 }
 
-body {
-  background: #FFFFFF;
-}
-
 .wrapper {
-  display: grid;
-  position: relative;
+  background-color: $background-color;
 }
 
-.sidemenu {
+.menu {
   position: fixed;
-  width: 200px;
-  height: 100%;
-  background: #F8F8F8;
-  padding: 30px 0;
+  width: 15%;
 }
 
-.sidemenu h2 {
-  color: #444444;
-  text-align: center;
-  margin-bottom: 30px;
+.container {
+  background-color: $background-accent-color;
+  border-radius: $border-radius-content 0 0 0;
+  width: 85%;
+  margin-left: auto;
 }
 
-.sidemenu ul li {
-  margin: 40px;
+.grid {
+  display: grid;
+  grid-template-rows: [header] 80px [body] auto;
 }
 
-.sidemenu ul li a {
-  color: #444444;
-  display: block;
+.header {
+  grid-row: header;
 }
 
-li:hover {
-  text-decoration: underline;
+.content {
+  grid-row: body;
+  background-color: $content-color;
+  border-radius: $border-radius-content 0 0 0;
 }
