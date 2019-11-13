@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const port = 5000;
 const app = express();
 
-const staticPath = path.resolve(__dirname, '..', 'src/');
+const staticPath = path.resolve(__dirname, '..', '.');
 app.use("/", express.static(staticPath));
 
 app.use(morgan('dev'));
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
     res.sendFile(path.resolve(staticPath, 'index.html'));
 });
 router.get('/main', (req, res) => {
-    res.sendFile(path.resolve(staticPath, './main/main.html'));
+    res.sendFile(path.resolve(staticPath, './src/main/main.html'));
 });
 
 

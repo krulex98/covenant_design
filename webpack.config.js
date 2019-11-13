@@ -1,34 +1,44 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
+    plugins: [
+        new ExtractTextPlugin('bundle.css')
+    ],
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-            },
-            {
                 test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
-                ],
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
             }
-        ],
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
-    ]
+        ]
+    }
+    // plugins: [
+    //     new MiniCssExtractPlugin({filename: "[name].css"})
+    // ],
+    // module: {
+    //     rules: [
+    //         {
+    //             test: /\.js$/,
+    //             exclude: /node_modules/,
+    //         },
+    //         {
+    //             test: /\.scss$/,
+    //             use: [
+    //                 MiniCssExtractPlugin.loader,
+    //                 'css-loader',
+    //                 'sass-loader',
+    //             ],
+    //         }
+    //     ],
+    // }
 };
