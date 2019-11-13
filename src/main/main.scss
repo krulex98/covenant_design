@@ -1,3 +1,47 @@
-.test {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat-Regular';
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+.wrapper {
+  display: grid;
+  position: relative;
+}
+
+.sidemenu {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #F8F8F8;
+  padding: 30px 0;
+}
+
+.sidemenu h2 {
+  color: #444444;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidemenu ul li {
+  margin: 40px;
+}
+
+.sidemenu ul li a {
+  color: #444444;
+  display: block;
+}
+
+li:hover {
+  text-decoration: underline;
 }

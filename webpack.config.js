@@ -20,25 +20,6 @@ module.exports = {
                     use: ['css-loader', 'sass-loader']
                 })
             }
-        ]
-    }
-    // plugins: [
-    //     new MiniCssExtractPlugin({filename: "[name].css"})
-    // ],
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.js$/,
-    //             exclude: /node_modules/,
-    //         },
-    //         {
-    //             test: /\.scss$/,
-    //             use: [
-    //                 MiniCssExtractPlugin.loader,
-    //                 'css-loader',
-    //                 'sass-loader',
-    //             ],
-    //         }
-    //     ],
-    // }
+        ],
+    },
 };
