@@ -26,6 +26,7 @@
 /*------------------ helpers end   ------------------*/
 
 .wrapper {
+  height: calc(100% - 80px);
   background-color: $background-color;
 }
 
@@ -169,6 +170,7 @@
   }
 
   &__input {
+    outline: none;
     background-color: transparent;
     padding-right: 20px;
     padding-top: 5px;
@@ -207,6 +209,82 @@
     height: 40px;
     vertical-align: middle;
   }
+}
+
+/*------------------ header end   ------------------*/
+
+/*------------------ player start   ------------------*/
+
+.player {
+  height: 80px;
+  position: sticky;
+  bottom: 0;
+  background-color: $player-color;
+  border-top: $border-color solid 1px;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.player__info {
+  grid-column: 1/2;
+}
+
+.player__info-inner {
+  padding-left: 80px;
+  display: table;
+}
+
+.player__track-logo {
+  display: table-cell;
+  vertical-align: middle;
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+  }
+}
+
+.player__track {
+  margin-left: 20px;
+  display: table;
+}
+.player__track-block {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.track-name {
+  font-weight: 800;
+  font-size: 14px;
+  color: $font-color;
+  height: 20px;
+}
+
+.artist-name {
+  color: $font-light-color;
+  font-size: 14px;
+  height: 20px;
+}
+
+.player__control {
+  grid-column: 2/3;
+}
+
+.player__control-inner {
+
+}
+
+.player__volume {
+  grid-column: 3/4;
+}
+
+.player__volume-inner {
+  padding-right: $padding-right-content;
 }
 
 /*------------------ header end   ------------------*/
