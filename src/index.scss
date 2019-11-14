@@ -23,6 +23,18 @@
   vertical-align: middle;
 }
 
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pr {
+  padding-right: $padding-right-content;
+}
+
 /*------------------ helpers end   ------------------*/
 
 .wrapper {
@@ -311,10 +323,57 @@
 
 .player__volume {
   grid-column: 3/4;
+  display: table;
 }
 
-.player__volume-inner {
-  padding-right: $padding-right-content;
+.player__volume-block {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.controls {
+  height: 40px;
+}
+
+.progress {
+  height: 20px;
+}
+
+.primary-progress {
+  width: 30%;
+  background-color: $accent-color;
+  height: 6px;
+}
+
+.secondary-progress {
+  width: 100%;
+  background-color: $progress-dark-color;
+  height: 6px;
+}
+
+.volume-img {
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.volume-w {
+  width: 200px;
+}
+
+.volume-progress {
+  vertical-align: middle;
+  width: 100%;
+  background-color: $progress-dark-color;
+  height: 6px;
+}
+
+.volume-primary-progress {
+  width: 30%;
+  background-color: $accent-color;
+  height: 6px;
 }
 
 /*------------------ header end   ------------------*/
