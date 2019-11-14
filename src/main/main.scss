@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: $font;
+  color: $font-color;
   text-decoration: none;
   box-sizing: border-box;
   height: 100%;
@@ -140,19 +141,44 @@
 }
 
 .header__search-container-inner {
-  padding-left: 30px;
+  padding-left: $padding-left-content;
   padding-right: 30px;
   width: 100%;
 }
 
-.header__user-container {
-  grid-column: 5/6;
-}
-
 .search {
-  height: 30px;
+  height: 40px;
   background-color: $content-color;
   width: 100%;
   border: $border-color solid 1px;
   border-radius: 40px;
+}
+
+.header__user-container {
+  grid-column: 4/6;
+}
+
+.header__user-container-inner {
+  float: right;
+  padding-right: $padding-right-content;
+  display: table;
+}
+
+.user-nickname {
+  font-size: 18px;
+  vertical-align:middle;
+  display:table-cell;
+  text-align:justify;
+  padding-right: 15px;
+}
+
+.user-logo {
+  vertical-align:middle;
+  display:table-cell;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+  }
 }
