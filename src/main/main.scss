@@ -8,10 +8,19 @@
   box-sizing: border-box;
   height: 100%;
 }
+/*------------------ helpers start ------------------*/
 
-ul {
-  list-style-type: none;
+.table {
+  display: table;
 }
+
+.table-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*------------------ helpers end   ------------------*/
 
 .wrapper {
   background-color: $background-color;
@@ -31,6 +40,7 @@ ul {
   font-size: 24px;
   font-weight: 800;
   color: $font-color;
+  cursor: pointer;
 
   &__label {
     vertical-align:middle;
@@ -62,10 +72,6 @@ ul {
   grid-template-rows: [header] $header-height [body] auto;
 }
 
-.header {
-  grid-row: header;
-}
-
 .content {
   grid-row: body;
   background-color: $content-color;
@@ -73,7 +79,6 @@ ul {
 }
 
 .menu-list {
-  margin-top: 20px;
 
   &__item {
     padding-left: 20px;
@@ -119,4 +124,35 @@ ul {
     color: $font-light-color;
     padding-left: 20px;
   }
+}
+
+.header {
+  grid-row: header;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.header__search-container {
+  grid-column: 1/4;
+}
+
+.header__search-container-inner {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.header__user-container {
+  grid-column: 5/6;
+}
+
+.search {
+  height: 30px;
+  background-color: $content-color;
+  width: 100%;
+  border: $border-color solid 1px;
+  border-radius: 40px;
 }
