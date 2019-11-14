@@ -14,13 +14,18 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 const router = express.Router();
-router.get('/', (req, res) => {
-    res.sendFile(path.resolve(staticPath, 'index.html'));
-});
-router.get('/main', (req, res) => {
-    res.sendFile(path.resolve(staticPath, './src/main/main.html'));
-});
+const routes = [
+    {name: '/', file: 'index.html'},
+    {name: '/main', file: './src/main/main.html'},
+    {name: '/login', file: './src/login/login.html'},
+    {name: '/signup', file: './src/signup/signup.html'}
+];
 
+routes.forEach(route => {
+   router.get(route.name, (req, res) => {
+       res.sendFile(path.resolve(staticPath, route.file));
+   })
+});
 
 app.use('/', router);
 app.listen(port, () => console.log(`server listen on port ${port}`));
