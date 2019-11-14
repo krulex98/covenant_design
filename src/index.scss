@@ -249,10 +249,10 @@
 }
 
 .player__track {
-  margin-left: 20px;
   display: table;
 }
 .player__track-block {
+  padding-left: 20px;
   display: table-cell;
   vertical-align: middle;
   text-align: left;
@@ -271,12 +271,42 @@
   height: 20px;
 }
 
-.player__control {
-  grid-column: 2/3;
+.like {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
-.player__control-inner {
+.player__control {
+  grid-column: 2/3;
+  display: table;
+}
 
+.player__control-block {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.control-btn {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.size-s {
+  width: 15px;
+  height: 15px;
+}
+
+.size-m {
+  width: 18px;
+  height: 18px;
+}
+
+.size-l {
+  width: 25px;
+  height: 25px;
 }
 
 .player__volume {
