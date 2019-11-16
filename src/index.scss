@@ -58,6 +58,8 @@
   grid-row: body;
   background-color: $content-color;
   border-radius: $border-radius-content 0 0 0;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 /*------------------ menu start   ------------------*/
