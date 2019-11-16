@@ -39,6 +39,7 @@
 .wrapper {
   height: calc(100% - 80px);
   background-color: $background-color;
+  overflow-y: auto;
 }
 
 .container {
@@ -229,7 +230,8 @@
 
 .player {
   height: 80px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   bottom: 0;
   background-color: $player-color;
   border-top: $border-color solid 1px;

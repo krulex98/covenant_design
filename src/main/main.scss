@@ -62,8 +62,8 @@
 
 .album-img {
   display: block;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -188,15 +188,13 @@
 }
 
 .artist-name-block {
-  display: inline-block;
-  margin-right: 30px;
-  vertical-align: top;
+  display: block;
+  height: 100%;
 }
 
 .artist-follow-block {
-  display: inline-block;
-  vertical-align: top;
-  float: right;
+  display: block;
+  height: 100%;
 }
 
 .artist-follow-btn {
