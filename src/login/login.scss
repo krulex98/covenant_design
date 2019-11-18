@@ -1,0 +1,112 @@
+$body_gradient_left: #7200D0;
+$body_gradient_right: #C800C1;
+$form_bg: #ffffff;
+$input_bg: #E5E5E5;
+$input_hover: #eaeaea;
+$submit_bg: #1FCC44;
+$submit_hover: #40e263;
+$icon_color: #6b6b6b;
+
+.body {
+  height: 100vh;
+  display: flex;
+  background-color: #000000CC;
+}
+
+.form_wrapper {
+  width: 500px;
+  margin: auto;
+  background-color: var(--form_bg);
+  border-radius: 50px;
+  padding: 5vh 15px;
+  display: flex;
+  align-items: center; /* horizontal */
+  justify-content: center; /* vertical */
+}
+
+.form_inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 10% 5%;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.input_container {
+  background-color: $input_bg;
+  /* vertically align icon and text inside the div*/
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.input_container:hover {
+  background-color: $input_hover;
+}
+
+.input_container {
+  height: 60px;
+  /* make the borders more round */
+  border-radius: 30px;
+  width: 100%;
+}
+
+.input_field {
+  /* customize the input tag with lighter font and some padding*/
+  color: $icon_color;
+  background-color: inherit;
+  width: 90%;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-left: 30px;
+}
+
+.input_field:hover,
+.input_field:focus {
+  /* remove the outline */
+  outline: none;
+}
+
+#input_submit {
+  /* submit button has a different color and different padding */
+  background-color: $submit_bg;
+  padding-left: 0;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#input_submit:hover {
+  background-color: $submit_hover;
+  /* simple color transition on hover */
+  transition: background-color, 1s;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.account {
+  display: block;
+  position: relative;
+  top: 30px;
+}
+
+.no-link {
+  /* remove default underline */
+  text-decoration: none;
+  color: $submit_bg;
+  font-weight: bold;
+}
+
+.no-link:hover {
+  color: $submit_hover;
+}
+
+i {
+  color: $icon_color;
+}

@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="../../dist/bundle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
 </head>
-<body>
-
+<body class="body">
+    <div class="form_wrapper">
+        <div class="form_inner">
+            <h1 class="text-center">Log In</h1>
+            <div class="input_container">
+                <i class="fas fa-envelope"></i>
+                <input placeholder="Email" type="email" name="Email" id="field_email" class='input_field'>
+            </div>
+            <div class="input_container">
+                <i class="fas fa-lock"></i>
+                <input  placeholder="Password" type="password" name="Password" id="field_password" class='input_field'>
+            </div>
+            <input class="input_field" type="submit" value="Login" id='input_submit'>
+            <span class="text-center">Forgot <a href="#"> Username / Password ?</a></span>
+        </div>
+    </div>
 </body>
 </html>
