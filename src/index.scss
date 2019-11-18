@@ -8,7 +8,6 @@
   font-family: $font, sans-serif;
   text-decoration: none;
   box-sizing: border-box;
-  height: 100%;
 }
 /*------------------ helpers start ------------------*/
 
@@ -45,7 +44,7 @@
 .container {
   background-color: $background-accent-color;
   border-radius: $border-radius-content 0 0 0;
-  width: 85%;
+  width: calc(100% - 250px);
   margin-left: auto;
 }
 
@@ -65,7 +64,7 @@
 
 .menu {
   position: fixed;
-  width: 15%;
+  width: 250px;
 }
 
 .menu-title {
@@ -159,6 +158,7 @@
 
 .header__search-container {
   grid-column: 1/4;
+  height: 100%;
 }
 
 .header__search-container-inner {
@@ -193,6 +193,7 @@
     text-align: left;
     width: 100%;
     font-size: 16px;
+    height: 100%;
   }
 }
 
@@ -204,6 +205,7 @@
   float: right;
   padding-right: $padding-right-content;
   display: table;
+  height: 100%;
 }
 
 .user-nickname {
@@ -250,8 +252,8 @@
 }
 
 .player__info-inner {
-  // padding-left: 80px;
   display: table;
+  height: 100%;
 }
 
 .player__track-logo {
@@ -267,6 +269,7 @@
 
 .player__track {
   display: table;
+  height: 100%;
 }
 .player__track-block {
   padding-left: 20px;
@@ -297,6 +300,7 @@
 .player__control {
   grid-column: 2/3;
   display: table;
+  height: 100%;
 }
 
 .player__control-block {
@@ -329,6 +333,7 @@
 .player__volume {
   grid-column: 3/4;
   display: table;
+  height: 100%;
 }
 
 .player__volume-block {
