@@ -18,7 +18,8 @@ const routes = [
     {name: '/', file: 'index.html'},
     {name: '/main', file: './src/main/main.html'},
     {name: '/login', file: './src/login/login.html'},
-    {name: '/signup', file: './src/signup/signup.html'}
+    {name: '/signup', file: './src/signup/signup.html'},
+    {name: '/profile', file: './src/profile/profile.html'}
 ];
 
 routes.forEach(route => {

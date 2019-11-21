@@ -1,14 +1,5 @@
 @import '../vars';
 
-.content-inner {
-  padding: 30px 0 30px $padding-left-content;
-  display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .albums {
   grid-row: 1/2;
   grid-column: 1/-1;
